@@ -2,7 +2,9 @@
 
 $censura = $_GET['censura'];
 $paragrafo = $_GET['paragrafo'];
-$lunghezza_paragrafo = strlen($paragrafo)
+$lunghezza_paragrafo = strlen($paragrafo);
+$paragrafo_censurato = str_replace($censura, '***', $paragrafo);
+$lunghezza_paragrafo_cens = strlen($paragrafo_censurato);
 
 ?>
 
@@ -20,6 +22,8 @@ $lunghezza_paragrafo = strlen($paragrafo)
   <div class="container my-5 ">
 
     <p>Paragrafo: <?php echo $paragrafo ?> <?php echo $lunghezza_paragrafo ?></p>
+    <p>Paragrafo: <?php echo $paragrafo_censurato ?> <?php echo $lunghezza_paragrafo_cens ?></p>
+
 
   </div>
 </body>
